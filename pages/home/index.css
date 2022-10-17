@@ -1,1 +1,48 @@
-/* Desenvolva sua estilização aqui...*/
+.header{
+
+    background: var(--color-brand-1);
+    height: 100vh;
+    width: 50%;
+}
+.section-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 40%;
+    width: 76%;
+}
+.section-title{
+
+
+    width: 46%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.section-text{
+    width: 47%;
+    margin-top: 3%;
+}
+.section-down{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 6%;
+    width: 59%;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-grey-1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}

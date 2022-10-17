@@ -14,4 +14,30 @@
     --color-grey-6:  #A6A8A9;
     --color-grey-7:  #FFFFFF;
     --color-alert:   #C22554;
+
+    --font-weight-title:600;
+    --font-weight-text:400;
+    
+    --font-size-title: 2rem;
+    --font-size-text:1.25rem;
+
+
+    --line-height-padrao:150%
+}
+.title{
+  
+  font-family: 'inter';
+  font-style: normal;
+  font-weight: var(--font-weight-title);
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-padrao);
+  color: var(--color-grey-7);
+}
+.text{
+  font-family: 'inter';
+    font-style: normal;
+    font-weight: var(--font-weight-text);
+    font-size: var(--font-size-text);
+    line-height: var(--line-height-padrao);
+    color: var(--color-grey-7);
 }

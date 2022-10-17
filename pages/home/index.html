@@ -9,7 +9,27 @@
     <title>Git Search</title>
   </head>
   <body>
-    <main></main>
+    <main class="container">
+      <section class="header">
+        <div class="section-top">
+          <h1 class="section-title title">Git Search</h1>
+          <p class="section-text text">Encontre e se conecte com profissionais de forma rápida e fácil</p>
+        </div>
+        <div id="section-down" class="section-down">
+          <p class="text">achados recentemente</p>
+          
+        </div>
+      </section>
+      <section>
+        <div>
+          <h1>Procurar por um usuário</h1>
+          <p>Usuário github</p>
+          <input type="text" placeholder="Digite um usuário do github aqui" id="input-search">
+          <span id="span-input" style="display:none; color: red;">Usuário não encontrado</span>
+          <button id="button-search" onclick=getUserData()> Ver perfil do github</button>
+        </div>
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
