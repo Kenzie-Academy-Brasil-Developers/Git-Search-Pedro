@@ -83,7 +83,7 @@ body{
 #user-change{
     width: 10.5625rem;
     height: 2.375rem;
-    background: var(--color-grey-2);
+    background: var(--color-grey-1);
     border-radius: 0.5rem;
     border: none;
 
@@ -109,10 +109,18 @@ body{
 
 }
 .div-empty{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 
 }
 .repo-empty{
-
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: var(--font-weight-title);
+    font-size: var(--font-size-title);
+    line-height: var(--line-height-padrao);
+    color: var(--color-grey-4);
 }
 .li-repo{
     display: flex;
