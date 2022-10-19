@@ -9,14 +9,23 @@
     <title>Nome do usuário Github</title>
   </head>
   <body >
-    <main id="container">
-      <div>
-        <img id="user-img">
-        <span id="user-job"></span>
-        <span id="user-name" ></span>
-        <a id="user-mail">Email</a>
-        <button id="user-change" onclick="window.location.href='../home/index.html'" >Trocar usuário</button>
+    <header>
+      <div class="div-base">
+        <div class="nav">
+          <img id="user-img">
+          <div class="nav-text">
+            <span id="user-name" ></span>
+            <span id="user-job"></span>            
+          </div>
+        </div>
+        <div class="nav-button">
+          <a id="user-mail">Email</a>
+          <button id="user-change" onclick="window.location.href='../home/index.html'" >Trocar usuário</button>      
+        </div>        
       </div>
+    </header>
+    <main id="container">
+      
       <div id="user-repos">
       </div>  
 

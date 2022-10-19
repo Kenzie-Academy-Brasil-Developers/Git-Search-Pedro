@@ -1,6 +1,7 @@
 function getUserData(){
     const name = document.getElementById('input-search').value
     if(name !== ""){
+       
         fetch(`https://api.github.com/users/${name}`)
         .then(function(response){ return response.json()})
         .then(function(responseJson){
@@ -38,7 +39,10 @@ function getUserData(){
                 localStorage.setItem("userToLoad",userToLoad)
                 
             }
-            window.location.href="../profile/index.html"
+            setTimeout(()=>{
+                window.location.href="../profile/index.html"
+            },1000)
+            
         }
          
         })
@@ -58,6 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             liProfile.classList = "li-profile"
             imgProfile.classList = "img-profile"
+            liProfile.onmouseover = () =>{
+                buttonProfile.style = "display:block;"
+            }
+            liProfile.onmouseout = () =>{
+                buttonProfile.style = "display:none;"
+            }
             imgProfile.src     = user.avatar_url
             buttonProfile.innerText    = "visitar esse perfil"
             buttonProfile.classList = "button-Profile"
