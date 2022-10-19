@@ -5,18 +5,20 @@ function getUserData(){
         .then(function(response){ return response.json()})
         .then(function(responseJson){
          if(responseJson.message !== undefined){
-            document.getElementById("span-input").style.display= ""
+            document.getElementById("span-input").style.display= ""
          }else{
-            document.getElementById("span-input").style.display= "none"
+            document.getElementById("span-input").style.display= "none"
             
-            let cont  = localStorage.getItem("cont")
-            let users = JSON.parse(localStorage.getItem("users"))
+            let cont    = localStorage.getItem("cont")
+            let users   = JSON.parse(localStorage.getItem("users"))
+            
             if(users == null){
                 users = [{},{},{}]
             }
             if(cont == null || cont == 3){
                 cont = 0
             }
+            
             let naoExiste = true
             let userToLoad = 0
             users.forEach((user, index) => {
@@ -34,6 +36,7 @@ function getUserData(){
                 localStorage.setItem("users",JSON.stringify(users))
                 localStorage.setItem("cont",cont)
                 localStorage.setItem("userToLoad",userToLoad)
+                
             }
             window.location.href="../profile/index.html"
         }
@@ -44,25 +47,29 @@ function getUserData(){
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const section = document.getElementById('section-down')
+    const ul = document.getElementById('ul-down')
 
     const users   = JSON.parse(localStorage.getItem("users"))
     users.forEach((user, index) => {
         if(user.hasOwnProperty("login")){
-            const div     = document.createElement('div')
-            const img     = document.createElement('img')
-            const button  = document.createElement('button')
+            const liProfile     = document.createElement('li')
+            const imgProfile    = document.createElement('img')
+            const buttonProfile = document.createElement('button')
             
-            img.src     = user.avatar_url
-            button.innerText    = "visitar esse perfil"
-            button.addEventListener('click',() =>{
+            liProfile.classList = "li-profile"
+            imgProfile.classList = "img-profile"
+            imgProfile.src     = user.avatar_url
+            buttonProfile.innerText    = "visitar esse perfil"
+            buttonProfile.classList = "button-Profile"
+            buttonProfile.addEventListener('click',() =>{
                 
                 localStorage.setItem("userToLoad",index)
                 window.location.href="../profile/index.html"
             })
-            section.appendChild(div)
-            div.append(img, button)
+            ul.appendChild(liProfile)
+            liProfile.append(imgProfile, buttonProfile)
         }
     })
 
-}, false);
+}, false);
+

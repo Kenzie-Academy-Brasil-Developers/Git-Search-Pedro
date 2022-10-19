@@ -15,16 +15,21 @@
           <h1 class="section-title title">Git Search</h1>
           <p class="section-text text">Encontre e se conecte com profissionais de forma rápida e fácil</p>
         </div>
-        <div id="section-down" class="section-down">
-          <p class="text">achados recentemente</p>
-          
+        <div  class="section-down">
+          <div class="div-text">
+            <span class="text">Achados recentemente:</span>
+          </div>
+          <div class="recent-profile">   
+            <ul id="ul-down">
+            </ul>
+          </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h1>Procurar por um usuário</h1>
-          <p>Usuário github</p>
-          <input type="text" placeholder="Digite um usuário do github aqui" id="input-search">
+      <section class="section-search">
+        <div class="div-search"> 
+          <h1 class="title">Procurar por um usuário</h1>
+          <p class="text">Usuário github</p>
+          <input class="input" type="text" placeholder="Digite um usuário do github aqui" id="input-search">
           <span id="span-input" style="display:none; color: red;">Usuário não encontrado</span>
           <button id="button-search" onclick=getUserData()> Ver perfil do github</button>
         </div>
